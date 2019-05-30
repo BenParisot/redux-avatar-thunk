@@ -16,7 +16,9 @@ class AllCharacters extends PureComponent {
   }
 
   componentDidMount() {
+    console.log('component did mount');
     this.props.fetch();
+    console.log('characters array', this.props.characters);
   }
 
   render() {
