@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function CharacterDetail({ character }) {
+  console.log('detail character', character);
   return (
     <section>
       <h2>{character.name}</h2>

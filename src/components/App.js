@@ -5,14 +5,14 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import CharacterDetail from '../components/characters/CharacterDetail';
+import CharacterById from '../containers/CharacterById';
 
 export default function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/characters/:id" component={CharacterDetail} />
-        <Route path="/" component={Home} />
+        <Route path="/characters/:_id" component={CharacterById} />
+        <Route exact path="/" component={Home} />
       </Switch>
     </Router>
   ); 
