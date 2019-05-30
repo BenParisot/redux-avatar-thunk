@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Character component renders a character component 1`] = `
+<Fragment>
+  <p>
+    Avatar-Man
+  </p>
+  <img
+    src="./image.png"
+  />
+</Fragment>
+`;
