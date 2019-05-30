@@ -11,7 +11,7 @@ function Character({ photoUrl, name }) {
 }
 
 Character.propTypes = {
-  photoUrl: PropTypes.string.isRequired,
+  photoUrl: PropTypes.string,
   name: PropTypes.string.isRequired,
   _id: PropTypes.string.isRequired
 };

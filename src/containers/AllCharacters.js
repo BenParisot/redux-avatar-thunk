@@ -3,31 +3,35 @@ import Characters from '../components/characters/Characters';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchCharacters } from '../actions/fetchCharacter';
-import { getCharacters } from '../selectors/character-selectors';
+import { getCharacters, getCharactersLoading, getCharactersError } from '../selectors/character-selectors';
 
 class AllCharacters extends PureComponent {
   static propTypes = {
     characters: PropTypes.arrayOf(PropTypes.shape({
-      photoUrl: PropTypes.string.isRequired,
+      photoUrl: PropTypes.string,
       name: PropTypes.string.isRequired,
       _id: PropTypes.string.isRequired
     })).isRequired,
-    fetch: PropTypes.func.isRequired
+    fetch: PropTypes.func.isRequired,
+    loading: PropTypes.bool.isRequired,
+    error: PropTypes.string
   }
 
   componentDidMount() {
-    console.log('component did mount');
     this.props.fetch();
-    console.log('characters array', this.props.characters);
   }
 
   render() {
-    const { characters } = this.props;
+    const { characters, loading, error } = this.props;
+    if(loading) return <h1>LOADING</h1>;
+    else if(error) return error;
     return <Characters characters={characters} />;
   }
 } 
 
 const mapStateToProps = state => ({
+  loading: getCharactersLoading(state),
+  error: getCharactersError(state),
   characters: getCharacters(state)
 });
 
