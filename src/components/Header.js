@@ -3,7 +3,7 @@ import Styles from '../styles.css';
 
 export default function Header() {
   return (
-    <header styles={Styles.header}>
+    <header>
       <h1>The Last Airbenders?</h1>
     </header>
   );

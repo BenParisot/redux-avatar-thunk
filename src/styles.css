@@ -1,3 +1,8 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -5,4 +10,35 @@ header {
     margin: 0px;
     background: coral;
     padding: 10px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+p {
+    color: darkorchid;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+}
+
+li {
+    list-style-type: none;
+    padding-right: 15px;
+    border: solid black 1px;
+    padding: 35px 45px;
+    margin: 10px;
+    border-radius: 100px;
 }
